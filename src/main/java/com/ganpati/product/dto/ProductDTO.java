@@ -8,8 +8,7 @@ public class ProductDTO {
     private Double price;
     private Long categoryId;
 
-    public ProductDTO(){
-    }
+    public ProductDTO(){}
 
     public ProductDTO(Long id, String name, String description, Double price, Long categoryId) {
         this.id = id;
