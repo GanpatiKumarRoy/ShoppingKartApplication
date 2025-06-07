@@ -3,6 +3,7 @@ package com.ganpati.product.service;
 import com.ganpati.product.dto.ProductDTO;
 import com.ganpati.product.entity.Category;
 import com.ganpati.product.entity.Product;
+import com.ganpati.product.exception.CategoryNotFoundException;
 import com.ganpati.product.mapper.ProductMapper;
 import com.ganpati.product.repository.CategoryRepository;
 import com.ganpati.product.repository.ProductRepository;
@@ -20,7 +21,7 @@ public class ProductService {
     private CategoryRepository categoryRepository;
 
     public ProductDTO createProduct(ProductDTO productDTO){
-        Category category = categoryRepository.findById(productDTO.getCategoryId()).orElseThrow(() -> new RuntimeException("Category Not Found!"));
+        Category category = categoryRepository.findById(productDTO.getCategoryId()).orElseThrow(() -> new CategoryNotFoundException("Category id " + productDTO.getCategoryId() + " not exists!"));
         Product product = ProductMapper.toProductEntity(productDTO, category);
         product = productRepository.save(product);
         return ProductMapper.toProductDTO(product);
@@ -31,7 +32,25 @@ public class ProductService {
     }
 
     public ProductDTO getAllProductById(Long id){
-        Product product =  productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found!"));
+        Product product =  productRepository.findById(id).orElseThrow(() -> new CategoryNotFoundException("Product id " + id + " not exists!"));
         return ProductMapper.toProductDTO(product);
+    }
+
+    public ProductDTO updateProduct(Long id, ProductDTO productDTO){
+        Product product =  productRepository.findById(id).orElseThrow(() -> new CategoryNotFoundException("Product id " + id + " not exists!"));
+        Category category = categoryRepository.findById(productDTO.getCategoryId()).orElseThrow(() -> new CategoryNotFoundException("Category id " + productDTO.getCategoryId() + " not exists!"));
+
+        product.setName(productDTO.getName());
+        product.setCategory(category);
+        product.setPrice(productDTO.getPrice());
+        product.setDescription(productDTO.getDescription());
+        product = productRepository.save(product);
+        return ProductMapper.toProductDTO(product);
+    }
+
+    public String deleteProduct(Long id){
+        productRepository.findById(id).orElseThrow(() -> new CategoryNotFoundException("Product id " + id + " not exists!"));
+        productRepository.deleteById(id);
+        return "Product " + id + " has been deleted!";
     }
 }
