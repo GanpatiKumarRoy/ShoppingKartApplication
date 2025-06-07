@@ -2,12 +2,17 @@ package com.ganpati.shoppingkart.controller;
 
 import com.ganpati.shoppingkart.dto.CategoryDTO;
 import com.ganpati.shoppingkart.service.CategoryService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@Tag(
+        name = "Category API CRUD Operation",
+        description = "CREATE, READ, UPDATE and DELETE operations for Category API"
+)
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
