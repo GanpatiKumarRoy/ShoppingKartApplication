@@ -1,4 +1,4 @@
-package com.ganpati.product.entity;
+package com.ganpati.shoppingkart.entity;
 
 import jakarta.persistence.*;
 

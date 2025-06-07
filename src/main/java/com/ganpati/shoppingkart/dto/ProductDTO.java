@@ -1,4 +1,4 @@
-package com.ganpati.product.dto;
+package com.ganpati.shoppingkart.dto;
 
 public class ProductDTO {
 

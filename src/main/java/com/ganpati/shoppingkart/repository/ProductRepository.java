@@ -1,6 +1,6 @@
-package com.ganpati.product.repository;
+package com.ganpati.shoppingkart.repository;
 
-import com.ganpati.product.entity.Product;
+import com.ganpati.shoppingkart.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

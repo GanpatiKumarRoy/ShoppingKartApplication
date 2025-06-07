@@ -1,7 +1,7 @@
-package com.ganpati.product.controller;
+package com.ganpati.shoppingkart.controller;
 
-import com.ganpati.product.dto.CategoryDTO;
-import com.ganpati.product.service.CategoryService;
+import com.ganpati.shoppingkart.dto.CategoryDTO;
+import com.ganpati.shoppingkart.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

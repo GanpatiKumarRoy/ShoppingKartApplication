@@ -1,4 +1,4 @@
-package com.ganpati.product;
+package com.ganpati.shoppingkart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

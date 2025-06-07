@@ -1,6 +1,6 @@
-package com.ganpati.product.exception;
+package com.ganpati.shoppingkart.exception;
 
-import com.ganpati.product.dto.ExceptionResponseDTO;
+import com.ganpati.shoppingkart.dto.ExceptionResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,11 +1,11 @@
-package com.ganpati.product.service;
+package com.ganpati.shoppingkart.service;
 
-import com.ganpati.product.dto.CategoryDTO;
-import com.ganpati.product.entity.Category;
-import com.ganpati.product.exception.CategoryAlreadyExistsException;
-import com.ganpati.product.exception.CategoryNotFoundException;
-import com.ganpati.product.mapper.CategoryMapper;
-import com.ganpati.product.repository.CategoryRepository;
+import com.ganpati.shoppingkart.dto.CategoryDTO;
+import com.ganpati.shoppingkart.entity.Category;
+import com.ganpati.shoppingkart.exception.CategoryAlreadyExistsException;
+import com.ganpati.shoppingkart.exception.CategoryNotFoundException;
+import com.ganpati.shoppingkart.mapper.CategoryMapper;
+import com.ganpati.shoppingkart.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

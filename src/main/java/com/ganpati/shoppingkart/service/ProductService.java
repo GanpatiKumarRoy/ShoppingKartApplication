@@ -1,12 +1,12 @@
-package com.ganpati.product.service;
+package com.ganpati.shoppingkart.service;
 
-import com.ganpati.product.dto.ProductDTO;
-import com.ganpati.product.entity.Category;
-import com.ganpati.product.entity.Product;
-import com.ganpati.product.exception.CategoryNotFoundException;
-import com.ganpati.product.mapper.ProductMapper;
-import com.ganpati.product.repository.CategoryRepository;
-import com.ganpati.product.repository.ProductRepository;
+import com.ganpati.shoppingkart.dto.ProductDTO;
+import com.ganpati.shoppingkart.entity.Category;
+import com.ganpati.shoppingkart.entity.Product;
+import com.ganpati.shoppingkart.exception.CategoryNotFoundException;
+import com.ganpati.shoppingkart.mapper.ProductMapper;
+import com.ganpati.shoppingkart.repository.CategoryRepository;
+import com.ganpati.shoppingkart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.ganpati.product.mapper;
+package com.ganpati.shoppingkart.mapper;
 
-import com.ganpati.product.dto.ProductDTO;
-import com.ganpati.product.entity.Category;
-import com.ganpati.product.entity.Product;
+import com.ganpati.shoppingkart.dto.ProductDTO;
+import com.ganpati.shoppingkart.entity.Category;
+import com.ganpati.shoppingkart.entity.Product;
 
 public class ProductMapper {
 
