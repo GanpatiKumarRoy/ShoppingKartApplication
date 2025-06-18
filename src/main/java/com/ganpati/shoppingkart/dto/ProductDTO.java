@@ -1,5 +1,11 @@
 package com.ganpati.shoppingkart.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(
+        name = "Product",
+        description = "It holds product information"
+)
 public class ProductDTO {
 
     private Long id;

@@ -1,9 +1,15 @@
 package com.ganpati.shoppingkart.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.util.List;
 
 // Not using lombok manually creating the code.
 
+@Schema(
+        name = "Category",
+        description = "It holds category information along with products"
+)
 public class CategoryDTO {
 
     private Long id;
